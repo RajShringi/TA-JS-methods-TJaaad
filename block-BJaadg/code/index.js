@@ -33,7 +33,7 @@ for (let i = 0; i < 6; i++) {
 5. Using the variable from , to and quote variable dispaly this message
   "Syrio Forel said There is only one thing we say to death: Not today to Arya Stark." (use concat method)
 */
-console.log(from.concat(quote, " ", to));
+console.log(from.concat(" said ", quote, " to ", to));
 /*
 6. Does from, to and quote ends with "rk". Check all three.
 */
@@ -59,7 +59,9 @@ let quoteSplitted = quote.split(" ");
 /*
 11. Change the word "today" in quoteSplitted to "tomorrow" and join all the words to form a sentance.
 */
-console.log(quoteSplitted.join(" ").replace("today", "tomorrow"));
+let index = quoteSplitted.indexOf("today");
+quoteSplitted[index] = "tomorrow";
+quoteSplitted.join(" ");
 /*
 12. Find the index of second "o" in quote. Use indexOf
 */
