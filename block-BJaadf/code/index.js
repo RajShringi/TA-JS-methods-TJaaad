@@ -12,7 +12,7 @@ console.log(fruits.length);
 delete fruits[0];
 console.log(fruits);
 // Log the element on index 0 and 1
-fruits.forEach((fruit) => console.log(fruit));
+console.log(fruits[0], fruits[1]);
 // If the element at 0 index is undefined and index 1 is 'Banana' shift all the values to one lower index (use shift method)
 if (fruits[0] === undefined && fruits[1] === "Banana") {
   fruits.shift();
@@ -79,7 +79,7 @@ console.log(oddNumbers);
 let evenNumbers = numbersThree.filter((num) => num % 2 === 0);
 console.log(evenNumbers);
 // Find the index of 10 in numbersThree array
-console.log(numbersThree.indexOf(10));
+numbersThree.find((num) => num === 10);
 // Reverse the values of numbersThree array
 numbersThree.reverse();
 console.log(numbersThree);
