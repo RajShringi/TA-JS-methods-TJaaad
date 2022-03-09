@@ -126,15 +126,17 @@ console.log(FullName);
 FullName.sort();
 console.log(FullName);
 // - Create a new array that contains only user who has at least one vowel in the firstname.
-let vowelInTheFirstName = customers.map((customer) => {
+let vowelInTheFirstName = customers.filter((customer) => {
   if (
-    customer.firstname.includes("a") ||
-    customer.firstname.includes("e") ||
-    customer.firstname.includes("i") ||
-    customer.firstname.includes("o") ||
-    customer.firstname.includes("u")
+    customer.firstname.toLowerCase().includes("a") ||
+    customer.firstname.toLowerCase().includes("e") ||
+    customer.firstname.toLowerCase().includes("i") ||
+    customer.firstname.toLowerCase().includes("o") ||
+    customer.firstname.toLowerCase().includes("u")
   ) {
-    return customer;
+    return true;
+  } else {
+    return false;
   }
 });
 console.log(vowelInTheFirstName);
