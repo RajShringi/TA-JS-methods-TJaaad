@@ -80,7 +80,7 @@ let sumArray = (arr) => {
 console.log(sumArray(numbers));
 // - Make a new array that contains number multiplied by 3 like [6, 18, 27 ...]
 let multipliedBy3 = (arr) => {
-  return arr.map((element) => element * 3);
+  return arr.filter((element) => element % 3 === 0);
 };
 console.log(multipliedBy3(numbers));
 // - Create a new array that contains only even numbers
