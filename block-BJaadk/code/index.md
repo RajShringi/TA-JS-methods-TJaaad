@@ -10,8 +10,8 @@ function double(num) {
 }
 let doubleNum = numbers.forEach(double);
 ```
-![](./img/main.png)
 
+![forEach-alert](./img/forEach-alert.png)
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -21,6 +21,8 @@ function double(num) {
 let doubleNum = numbers.forEach(double);
 ```
 
+![forEach-return](./img/forEach-return.png)
+
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function double(num) {
@@ -28,6 +30,8 @@ function double(num) {
 }
 let doubleNum = numbers.forEach(double);
 ```
+
+![forEach-log](./img/forEach-log.png)
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -37,6 +41,8 @@ function double(num) {
 let doubleNumbers = numbers.map(double);
 ```
 
+![map-return](./img/map-return.png)
+
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function addTwo(num) {
@@ -45,6 +51,8 @@ function addTwo(num) {
 let doubleNumbers = numbers.map(addTwo);
 ```
 
+![map-return-addTwo](./img/map-return-addTwo.png)
+
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function addTwo(num) {
@@ -52,6 +60,8 @@ function addTwo(num) {
 }
 let doubleNumbers = numbers.map(addTwo);
 ```
+
+![map-console-log](./img/map-console-log.png)
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -61,6 +71,8 @@ function addTwo(num) {
 let doubleNumbers = numbers.map(addTwo);
 ```
 
+![map-alert](./img/map-alert.png)
+
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function isOdd(num) {
@@ -68,6 +80,8 @@ function isOdd(num) {
 }
 let oddNumbers = numbers.filter(isOdd);
 ```
+
+![filter-return-isOdd](./img/filter-return-isOdd.png)
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -77,6 +91,8 @@ function test(num) {
 let filteredNumbers = numbers.filter(test);
 ```
 
+![filer-return-num](./img/filter-return-num.png)
+
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function test(num) {
@@ -84,6 +100,8 @@ function test(num) {
 }
 let filteredNumbers = numbers.filter(test);
 ```
+
+![filter-console-log](./img/filter-console-log.png)
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -93,6 +111,8 @@ function add(accumulator, currentValue) {
 let sum = numbers.reduce(add);
 ```
 
+![reduce-return](./img/reduce-return.png)
+
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function add(accumulator, currentValue) {
@@ -100,3 +120,5 @@ function add(accumulator, currentValue) {
 }
 let sum = numbers.reduce(add);
 ```
+
+![reduce-cosole-log](./img/reduce-console-log.png)
