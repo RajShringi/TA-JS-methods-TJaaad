@@ -2,34 +2,95 @@
 
 function countAllPeople() {
   // your code goes here
+  let sum = 0;
+  for (let i = 0; i < got.houses.length; i++) {
+    sum += got.houses[i].people.length;
+  }
+  return sum;
 }
 
 function peopleByHouses() {
   // your code goes here
+  let obj = {};
+  for (let i = 0; i < got.houses.length; i++) {
+    obj[got.houses[i].name] = got.houses[i].people.length;
+  }
+  return obj;
 }
 
 function everyone() {
   // your code goes here
+  let final = [];
+  for (let i = 0; i < got.houses.length; i++) {
+    for (let j = 0; j < got.houses[i].people.length; j++) {
+      final.push(got.houses[i].people[j].name);
+    }
+  }
+  return final;
 }
 
 function nameWithS() {
   // your code goes here
+  let final = [];
+  for (let i = 0; i < got.houses.length; i++) {
+    for (let j = 0; j < got.houses[i].people.length; j++) {
+      if (got.houses[i].people[j].name.toLowerCase().includes("s")) {
+        final.push(got.houses[i].people[j].name);
+      }
+    }
+  }
+  return final;
 }
 
 function nameWithA() {
   // your code goes here
+  let final = [];
+  for (let i = 0; i < got.houses.length; i++) {
+    for (let j = 0; j < got.houses[i].people.length; j++) {
+      if (got.houses[i].people[j].name.toLowerCase().includes("a")) {
+        final.push(got.houses[i].people[j].name);
+      }
+    }
+  }
+  return final;
 }
 
 function surnameWithS() {
   // your code goes here
+  let final = [];
+  for (let i = 0; i < got.houses.length; i++) {
+    for (let j = 0; j < got.houses[i].people.length; j++) {
+      if (got.houses[i].people[j].name.split(" ")[1][0].startsWith("S")) {
+        final.push(got.houses[i].people[j].name);
+      }
+    }
+  }
+  return final;
 }
 
 function surnameWithA() {
   // your code goes here
+  let final = [];
+  for (let i = 0; i < got.houses.length; i++) {
+    for (let j = 0; j < got.houses[i].people.length; j++) {
+      if (got.houses[i].people[j].name.split(" ")[1][0].startsWith("A")) {
+        final.push(got.houses[i].people[j].name);
+      }
+    }
+  }
+  return final;
 }
 
 function peopleNameOfAllHouses() {
   // your code goes here
+  let obj = {};
+  for (let i = 0; i < got.houses.length; i++) {
+    obj[got.houses[i].name] = [];
+    for (let j = 0; j < got.houses[i].people.length; j++) {
+      obj[got.houses[i].name].push(got.houses[i].people[j].name);
+    }
+  }
+  return obj;
 }
 
 // Testing your result after writing your function
@@ -44,7 +105,7 @@ console.log(everyone());
 // Output should be
 //["Eddard "Ned" Stark", "Benjen Stark", "Robb Stark", "Sansa Stark", "Arya Stark", "Brandon "Bran" Stark", "Rickon Stark", "Jon Snow", "Tywin Lannister", "Tyrion Lannister", "Jaime Lannister", "Queen Cersei (Lannister) Baratheon", "King Robert Baratheon", "Stannis Baratheon", "Renly Baratheon", "Joffrey Baratheon", "Tommen Baratheon", "Myrcella Baratheon", "Daenerys Targaryen", "Viserys Targaryen", "Balon Greyjoy", "Theon Greyjoy", "Yara Greyjoy", "Margaery (Tyrell) Baratheon", "Loras Tyrell", "Catelyn (Tully) Stark", "Lysa (Tully) Arryn", "Edmure Tully", "Brynden Tully", "Olenna (Redwyne) Tyrell", "Walder Frey", "Jon Arryn", "Khal Drogo"]
 
-console.log(nameWithS(), 'with s');
+console.log(nameWithS(), "with s");
 // Output should be
 // ["Eddard "Ned" Stark", "Benjen Stark", "Robb Stark", "Sansa Stark", "Arya Stark", "Brandon "Bran" Stark", "Rickon Stark", "Jon Snow", "Tywin Lannister", "Tyrion Lannister", "Jaime Lannister", "Queen Cersei (Lannister) Baratheon", "Stannis Baratheon", "Daenerys Targaryen", "Viserys Targaryen", "Loras Tyrell", "Catelyn (Tully) Stark", "Lysa (Tully) Arryn"]
 
@@ -52,7 +113,7 @@ console.log(nameWithA());
 // Output should be
 // ["Eddard Stark", "Benjen Stark", "Robb Stark", "Sansa Stark", "Arya Stark", "Brandon Stark", "Rickon Stark", "Tywin Lannister", "Tyrion Lannister", "Jaime Lannister", "Cersei Baratheon", "Robert Baratheon", "Stannis Baratheon", "Renly Baratheon", "Joffrey Baratheon", "Tommen Baratheon", "Myrcella Baratheon", "Daenerys Targaryen", "Viserys Targaryen", "Balon Greyjoy", "Yara Greyjoy", "Margaery Baratheon", "Loras Tyrell", "Catelyn Stark", "Lysa Arryn", "Olenna Tyrell", "Walder Frey", "Jon Arryn", "Khal Drogo"]
 
-console.log(surnameWithS(), 'surname with s');
+console.log(surnameWithS(), "surname with s");
 // Output should be
 // ["Eddard Stark", "Benjen Stark", "Robb Stark", "Sansa Stark", "Arya Stark", "Brandon Stark", "Rickon Stark", "Jon Snow", "Catelyn Stark"]
 
