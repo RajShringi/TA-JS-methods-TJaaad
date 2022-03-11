@@ -3,93 +3,87 @@
 function countAllPeople() {
   // your code goes here
   let sum = 0;
-  for (let i = 0; i < got.houses.length; i++) {
-    sum += got.houses[i].people.length;
-  }
+  got.houses.forEach((house) => {
+    sum += house.people.length;
+  });
   return sum;
 }
 
 function peopleByHouses() {
   // your code goes here
   let obj = {};
-  for (let i = 0; i < got.houses.length; i++) {
-    obj[got.houses[i].name] = got.houses[i].people.length;
-  }
+  got.houses.forEach((house) => {
+    obj[house.name] = house.name.length;
+  });
   return obj;
 }
 
 function everyone() {
   // your code goes here
   let final = [];
-  for (let i = 0; i < got.houses.length; i++) {
-    for (let j = 0; j < got.houses[i].people.length; j++) {
-      final.push(got.houses[i].people[j].name);
-    }
-  }
+  got.houses.forEach((house) => {
+    let People = house.people.map((person) => person.name);
+    final = final.concat(People);
+  });
   return final;
 }
 
 function nameWithS() {
   // your code goes here
-  let final = [];
-  for (let i = 0; i < got.houses.length; i++) {
-    for (let j = 0; j < got.houses[i].people.length; j++) {
-      if (got.houses[i].people[j].name.toLowerCase().includes("s")) {
-        final.push(got.houses[i].people[j].name);
-      }
-    }
-  }
-  return final;
+  // let final = [];
+  // for (let i = 0; i < got.houses.length; i++) {
+  //   for (let j = 0; j < got.houses[i].people.length; j++) {
+  //     if (got.houses[i].people[j].name.toLowerCase().includes("s")) {
+  //       final.push(got.houses[i].people[j].name);
+  //     }
+  //   }
+  // }
+  // return final;
+  let allPeople = everyone();
+  return allPeople.filter((person) => person.toLowerCase().includes("s"));
 }
 
 function nameWithA() {
   // your code goes here
-  let final = [];
-  for (let i = 0; i < got.houses.length; i++) {
-    for (let j = 0; j < got.houses[i].people.length; j++) {
-      if (got.houses[i].people[j].name.toLowerCase().includes("a")) {
-        final.push(got.houses[i].people[j].name);
-      }
-    }
-  }
-  return final;
+  let allPeople = everyone();
+  return allPeople.filter((person) => person.toLowerCase().includes("a"));
 }
 
 function surnameWithS() {
   // your code goes here
-  let final = [];
-  for (let i = 0; i < got.houses.length; i++) {
-    for (let j = 0; j < got.houses[i].people.length; j++) {
-      if (got.houses[i].people[j].name.split(" ")[1][0].startsWith("S")) {
-        final.push(got.houses[i].people[j].name);
-      }
-    }
-  }
-  return final;
+  // let final = [];
+  // for (let i = 0; i < got.houses.length; i++) {
+  //   for (let j = 0; j < got.houses[i].people.length; j++) {
+  //     if (got.houses[i].people[j].name.split(" ")[1][0].startsWith("S")) {
+  //       final.push(got.houses[i].people[j].name);
+  //     }
+  //   }
+  // }
+  // return final;
+  let allPeople = everyone();
+  return allPeople.filter((person) => person.split(" ")[1].includes("S"));
 }
 
 function surnameWithA() {
   // your code goes here
-  let final = [];
-  for (let i = 0; i < got.houses.length; i++) {
-    for (let j = 0; j < got.houses[i].people.length; j++) {
-      if (got.houses[i].people[j].name.split(" ")[1][0].startsWith("A")) {
-        final.push(got.houses[i].people[j].name);
-      }
-    }
-  }
-  return final;
+  let allPeople = everyone();
+  return allPeople.filter((person) => person.split(" ")[1].includes("A"));
 }
 
 function peopleNameOfAllHouses() {
   // your code goes here
+  // let obj = {};
+  // for (let i = 0; i < got.houses.length; i++) {
+  //   obj[got.houses[i].name] = [];
+  //   for (let j = 0; j < got.houses[i].people.length; j++) {
+  //     obj[got.houses[i].name].push(got.houses[i].people[j].name);
+  //   }
+  // }
+  // return obj;
   let obj = {};
-  for (let i = 0; i < got.houses.length; i++) {
-    obj[got.houses[i].name] = [];
-    for (let j = 0; j < got.houses[i].people.length; j++) {
-      obj[got.houses[i].name].push(got.houses[i].people[j].name);
-    }
-  }
+  got.houses.forEach((house) => {
+    obj[house.name] = house.people.map((person) => person.name);
+  });
   return obj;
 }
 
